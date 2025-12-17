@@ -10,7 +10,9 @@ import SwiftUI
 struct ProductDetailView: View {
     
     @State var showBuy = false
-    
+
+    @State var showSpec = false
+
     var body: some View {
         VStack {
             Text("PRODUCT DETAIL")
@@ -23,10 +25,21 @@ struct ProductDetailView: View {
                 showBuy = true
             }
             
+            Button("Specifications") {
+                showSpec = true
+            }
+            
         }
         .fullScreenCover(isPresented: $showBuy) {
             // TODO: Fix buy screen
-            Text("LETS BUY")
+            BuyView(letshow: $showBuy)
+        }
+        .sheet(isPresented: $showSpec) {
+            VStack {
+                Text("This is spec")
+            }
+            .frame(height: 200)
+            .background(.red)
         }
         
     }

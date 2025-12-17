@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StartView: View {
     
-    @State var isLoggedin = false
+    @State var isLoggedin = true
     
     var body: some View {
         
