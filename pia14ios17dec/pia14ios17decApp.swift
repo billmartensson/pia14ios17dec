@@ -11,7 +11,7 @@ import SwiftUI
 struct pia14ios17decApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            StartView()
         }
     }
 }
